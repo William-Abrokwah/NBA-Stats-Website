@@ -3,7 +3,7 @@ package com.william.nba_stats;
 import jakarta.persistence.*;
 
 @Entity
-public class PlayerSeasonStats {
+public class Player {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id; // Primary key (database unique identifier)
@@ -50,13 +50,13 @@ public class PlayerSeasonStats {
 
     private Integer pts; // Total points scored
 
-    public PlayerSeasonStats() {
+    public Player() {
     }
 
-    public PlayerSeasonStats(Long id, Integer rk, String player, Integer age, String team, String pos, Integer g, Integer gs, Double mp,
-                             Integer fg, Integer fga, Double fgPct, Integer threeP, Integer threePa, Double threePct, Integer twoP, Integer twoPa,
-                             Double twoPct, Double efgPct, Integer ft, Integer fta, Double ftPct, Integer orb, Integer drb, Integer trb, Integer ast,
-                             Integer stl, Integer blk, Integer tov, Integer pf, Integer pts) {
+    public Player(Long id, Integer rk, String player, Integer age, String team, String pos, Integer g, Integer gs, Double mp,
+                  Integer fg, Integer fga, Double fgPct, Integer threeP, Integer threePa, Double threePct, Integer twoP, Integer twoPa,
+                  Double twoPct, Double efgPct, Integer ft, Integer fta, Double ftPct, Integer orb, Integer drb, Integer trb, Integer ast,
+                  Integer stl, Integer blk, Integer tov, Integer pf, Integer pts) {
         this.id = id;
         this.rk = rk;
         this.player = player;
@@ -332,5 +332,42 @@ public class PlayerSeasonStats {
 
     public void setPts(Integer pts) {
         this.pts = pts;
+    }
+
+    @Override
+    public String toString() {
+        return "PlayerSeasonStats{" +
+                "id=" + id +
+                ", rk=" + rk +
+                ", player='" + player + '\'' +
+                ", age=" + age +
+                ", team='" + team + '\'' +
+                ", pos='" + pos + '\'' +
+                ", g=" + g +
+                ", gs=" + gs +
+                ", mp=" + mp +
+                ", fg=" + fg +
+                ", fga=" + fga +
+                ", fgPct=" + fgPct +
+                ", threeP=" + threeP +
+                ", threePa=" + threePa +
+                ", threePct=" + threePct +
+                ", twoP=" + twoP +
+                ", twoPa=" + twoPa +
+                ", twoPct=" + twoPct +
+                ", efgPct=" + efgPct +
+                ", ft=" + ft +
+                ", fta=" + fta +
+                ", ftPct=" + ftPct +
+                ", orb=" + orb +
+                ", drb=" + drb +
+                ", trb=" + trb +
+                ", ast=" + ast +
+                ", stl=" + stl +
+                ", blk=" + blk +
+                ", tov=" + tov +
+                ", pf=" + pf +
+                ", pts=" + pts +
+                '}';
     }
 }
