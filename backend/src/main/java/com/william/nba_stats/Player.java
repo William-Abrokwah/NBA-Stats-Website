@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class Player {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // Primary key (database unique identifier)
 
     private Integer rk; // Rank of player in stats list
@@ -19,44 +19,45 @@ public class Player {
 
     private Double mp; // Minutes played per game (or total depending on dataset)
 
-    private Integer fg; // Field goals made
-    private Integer fga; // Field goals attempted
-    private Double fgPct; // Field goal percentage
+    private Double fg; // Field goals made
+    private Double fg_avg; // Field goals attempted
+    private Double fg_pct; // Field goal percentage
 
-    private Integer threeP; // 3-point shots made
-    private Integer threePa; // 3-point shots attempted
-    private Double threePct; // 3-point percentage
+    private Double threep; // 3-point shots made
+    private Double threep_avg; // 3-point shots attempted
+    private Double threep_pct; // 3-point percentage
 
-    private Integer twoP; // 2-point shots made
-    private Integer twoPa; // 2-point shots attempted
-    private Double twoPct; // 2-point percentage
+    private Double twop; // 2-point shots made
+    private Double twop_avg; // 2-point shots attempted
+    private Double twop_pct; // 2-point percentage
 
-    private Double efgPct; // Effective field goal percentage
+    private Double efg_pct; // Effective field goal percentage
 
-    private Integer ft; // Free throws made
-    private Integer fta; // Free throws attempted
-    private Double ftPct; // Free throw percentage
+    private Double ft; // Free throws made
+    private Double ft_avg; // Free throws attempted
+    private Double ft_pct; // Free throw percentage
 
-    private Integer orb; // Offensive rebounds
-    private Integer drb; // Defensive rebounds
-    private Integer trb; // Total rebounds
+    private Double orb; // Offensive rebounds
+    private Double drb; // Defensive rebounds
+    private Double trb; // Total rebounds
 
-    private Integer ast; // Assists
+    private Double ast; // Assists
 
-    private Integer stl; // Steals
-    private Integer blk; // Blocks
-    private Integer tov; // Turnovers
-    private Integer pf; // Personal fouls
+    private Double stl; // Steals
+    private Double blk; // Blocks
+    private Double tov; // Turnovers
+    private Double pf; // Personal fouls
 
-    private Integer pts; // Total points scored
+    private Double pts; // Total points scored
 
     public Player() {
     }
 
-    public Player(Long id, Integer rk, String player, Integer age, String team, String pos, Integer g, Integer gs, Double mp,
-                  Integer fg, Integer fga, Double fgPct, Integer threeP, Integer threePa, Double threePct, Integer twoP, Integer twoPa,
-                  Double twoPct, Double efgPct, Integer ft, Integer fta, Double ftPct, Integer orb, Integer drb, Integer trb, Integer ast,
-                  Integer stl, Integer blk, Integer tov, Integer pf, Integer pts) {
+    public Player(Long id, Integer rk, String player, Integer age, String team, String pos, Integer g,
+                  Integer gs, Double mp, Double fg, Double fg_avg, Double fg_pct, Double threep,
+                  Double threep_avg, Double threep_pct, Double twop, Double twop_avg, Double twop_pct,
+                  Double efg_pct, Double ft, Double ft_avg, Double ft_pct, Double orb, Double drb, Double trb,
+                  Double ast, Double stl, Double blk, Double tov, Double pf, Double pts) {
         this.id = id;
         this.rk = rk;
         this.player = player;
@@ -67,18 +68,18 @@ public class Player {
         this.gs = gs;
         this.mp = mp;
         this.fg = fg;
-        this.fga = fga;
-        this.fgPct = fgPct;
-        this.threeP = threeP;
-        this.threePa = threePa;
-        this.threePct = threePct;
-        this.twoP = twoP;
-        this.twoPa = twoPa;
-        this.twoPct = twoPct;
-        this.efgPct = efgPct;
+        this.fg_avg = fg_avg;
+        this.fg_pct = fg_pct;
+        this.threep = threep;
+        this.threep_avg = threep_avg;
+        this.threep_pct = threep_pct;
+        this.twop = twop;
+        this.twop_avg = twop_avg;
+        this.twop_pct = twop_pct;
+        this.efg_pct = efg_pct;
         this.ft = ft;
-        this.fta = fta;
-        this.ftPct = ftPct;
+        this.ft_avg = ft_avg;
+        this.ft_pct = ft_pct;
         this.orb = orb;
         this.drb = drb;
         this.trb = trb;
@@ -98,245 +99,125 @@ public class Player {
         return rk;
     }
 
-    public void setRk(Integer rk) {
-        this.rk = rk;
-    }
-
     public String getPlayer() {
         return player;
-    }
-
-    public void setPlayer(String player) {
-        this.player = player;
     }
 
     public Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
     }
 
     public String getPos() {
         return pos;
     }
 
-    public void setPos(String pos) {
-        this.pos = pos;
-    }
-
     public Integer getG() {
         return g;
-    }
-
-    public void setG(Integer g) {
-        this.g = g;
     }
 
     public Integer getGs() {
         return gs;
     }
 
-    public void setGs(Integer gs) {
-        this.gs = gs;
-    }
-
     public Double getMp() {
         return mp;
     }
 
-    public void setMp(Double mp) {
-        this.mp = mp;
-    }
-
-    public Integer getFg() {
+    public Double getFg() {
         return fg;
     }
 
-    public void setFg(Integer fg) {
-        this.fg = fg;
+    public Double getFg_avg() {
+        return fg_avg;
     }
 
-    public Integer getFga() {
-        return fga;
+    public Double getFg_pct() {
+        return fg_pct;
     }
 
-    public void setFga(Integer fga) {
-        this.fga = fga;
+    public Double getThreep() {
+        return threep;
     }
 
-    public Double getFgPct() {
-        return fgPct;
+    public Double getThreep_avg() {
+        return threep_avg;
     }
 
-    public void setFgPct(Double fgPct) {
-        this.fgPct = fgPct;
+    public Double getThreep_pct() {
+        return threep_pct;
     }
 
-    public Integer getThreeP() {
-        return threeP;
+    public Double getTwop() {
+        return twop;
     }
 
-    public void setThreeP(Integer threeP) {
-        this.threeP = threeP;
+    public Double getTwop_avg() {
+        return twop_avg;
     }
 
-    public Integer getThreePa() {
-        return threePa;
+    public Double getTwop_pct() {
+        return twop_pct;
     }
 
-    public void setThreePa(Integer threePa) {
-        this.threePa = threePa;
+    public Double getEfg_pct() {
+        return efg_pct;
     }
 
-    public Double getThreePct() {
-        return threePct;
-    }
-
-    public void setThreePct(Double threePct) {
-        this.threePct = threePct;
-    }
-
-    public Integer getTwoP() {
-        return twoP;
-    }
-
-    public void setTwoP(Integer twoP) {
-        this.twoP = twoP;
-    }
-
-    public Integer getTwoPa() {
-        return twoPa;
-    }
-
-    public void setTwoPa(Integer twoPa) {
-        this.twoPa = twoPa;
-    }
-
-    public Double getTwoPct() {
-        return twoPct;
-    }
-
-    public void setTwoPct(Double twoPct) {
-        this.twoPct = twoPct;
-    }
-
-    public Double getEfgPct() {
-        return efgPct;
-    }
-
-    public void setEfgPct(Double efgPct) {
-        this.efgPct = efgPct;
-    }
-
-    public Integer getFt() {
+    public Double getFt() {
         return ft;
     }
 
-    public void setFt(Integer ft) {
-        this.ft = ft;
+    public Double getFt_avg() {
+        return ft_avg;
     }
 
-    public Integer getFta() {
-        return fta;
+    public Double getFt_pct() {
+        return ft_pct;
     }
 
-    public void setFta(Integer fta) {
-        this.fta = fta;
-    }
-
-    public Double getFtPct() {
-        return ftPct;
-    }
-
-    public void setFtPct(Double ftPct) {
-        this.ftPct = ftPct;
-    }
-
-    public Integer getOrb() {
+    public Double getOrb() {
         return orb;
     }
 
-    public void setOrb(Integer orb) {
-        this.orb = orb;
-    }
-
-    public Integer getDrb() {
+    public Double getDrb() {
         return drb;
     }
 
-    public void setDrb(Integer drb) {
-        this.drb = drb;
-    }
-
-    public Integer getTrb() {
+    public Double getTrb() {
         return trb;
     }
 
-    public void setTrb(Integer trb) {
-        this.trb = trb;
-    }
-
-    public Integer getAst() {
+    public Double getAst() {
         return ast;
     }
 
-    public void setAst(Integer ast) {
-        this.ast = ast;
-    }
-
-    public Integer getStl() {
+    public Double getStl() {
         return stl;
     }
 
-    public void setStl(Integer stl) {
-        this.stl = stl;
-    }
-
-    public Integer getBlk() {
+    public Double getBlk() {
         return blk;
     }
 
-    public void setBlk(Integer blk) {
-        this.blk = blk;
-    }
-
-    public Integer getTov() {
+    public Double getTov() {
         return tov;
     }
 
-    public void setTov(Integer tov) {
-        this.tov = tov;
-    }
-
-    public Integer getPf() {
+    public Double getPf() {
         return pf;
     }
 
-    public void setPf(Integer pf) {
-        this.pf = pf;
-    }
-
-    public Integer getPts() {
+    public Double getPts() {
         return pts;
-    }
-
-    public void setPts(Integer pts) {
-        this.pts = pts;
     }
 
     @Override
     public String toString() {
-        return "PlayerSeasonStats{" +
+        return "Player{" +
                 "id=" + id +
                 ", rk=" + rk +
                 ", player='" + player + '\'' +
@@ -347,18 +228,18 @@ public class Player {
                 ", gs=" + gs +
                 ", mp=" + mp +
                 ", fg=" + fg +
-                ", fga=" + fga +
-                ", fgPct=" + fgPct +
-                ", threeP=" + threeP +
-                ", threePa=" + threePa +
-                ", threePct=" + threePct +
-                ", twoP=" + twoP +
-                ", twoPa=" + twoPa +
-                ", twoPct=" + twoPct +
-                ", efgPct=" + efgPct +
+                ", fg_avg=" + fg_avg +
+                ", fg_pct=" + fg_pct +
+                ", threep=" + threep +
+                ", threep_avg=" + threep_avg +
+                ", threep_pct=" + threep_pct +
+                ", twop=" + twop +
+                ", twop_avg=" + twop_avg +
+                ", twop_pct=" + twop_pct +
+                ", efg_pct=" + efg_pct +
                 ", ft=" + ft +
-                ", fta=" + fta +
-                ", ftPct=" + ftPct +
+                ", ft_avg=" + ft_avg +
+                ", ft_pct=" + ft_pct +
                 ", orb=" + orb +
                 ", drb=" + drb +
                 ", trb=" + trb +
