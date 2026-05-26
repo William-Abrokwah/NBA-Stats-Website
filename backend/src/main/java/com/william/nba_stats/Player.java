@@ -9,7 +9,7 @@ public class Player {
     private Long id; // Primary key (database unique identifier)
 
     private Integer rk; // Rank of player in stats list
-    private String player; // Player name
+    private String name; // Player name
     private Integer age; // Player age during season
     private String team; // Team abbreviation (e.g., LAL, GSW)
     private String pos; // Player position (e.g., PG, SG, SF, PF, C)
@@ -53,14 +53,14 @@ public class Player {
     public Player() {
     }
 
-    public Player(Long id, Integer rk, String player, Integer age, String team, String pos, Integer g,
+    public Player(Long id, Integer rk, String name, Integer age, String team, String pos, Integer g,
                   Integer gs, Double mp, Double fg, Double fg_avg, Double fg_pct, Double threep,
                   Double threep_avg, Double threep_pct, Double twop, Double twop_avg, Double twop_pct,
                   Double efg_pct, Double ft, Double ft_avg, Double ft_pct, Double orb, Double drb, Double trb,
                   Double ast, Double stl, Double blk, Double tov, Double pf, Double pts) {
         this.id = id;
         this.rk = rk;
-        this.player = player;
+        this.name = name;
         this.age = age;
         this.team = team;
         this.pos = pos;
@@ -99,8 +99,8 @@ public class Player {
         return rk;
     }
 
-    public String getPlayer() {
-        return player;
+    public String getName() {
+        return name;
     }
 
     public Integer getAge() {
@@ -215,12 +215,170 @@ public class Player {
         return pts;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setRk(Integer rk) {
+        this.rk = rk;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+    public void setPos(String pos) {
+        this.pos = pos;
+    }
+
+    public void setG(Integer g) {
+        this.g = g;
+    }
+
+    public void setGs(Integer gs) {
+        this.gs = gs;
+    }
+
+    public void setMp(Double mp) {
+        this.mp = mp;
+    }
+
+    public void setFg(Double fg) {
+        this.fg = fg;
+    }
+
+    public void setFg_avg(Double fg_avg) {
+        this.fg_avg = fg_avg;
+    }
+
+    public void setFg_pct(Double fg_pct) {
+        this.fg_pct = fg_pct;
+    }
+
+    public void setThreep(Double threep) {
+        this.threep = threep;
+    }
+
+    public void setThreep_avg(Double threep_avg) {
+        this.threep_avg = threep_avg;
+    }
+
+    public void setThreep_pct(Double threep_pct) {
+        this.threep_pct = threep_pct;
+    }
+
+    public void setTwop(Double twop) {
+        this.twop = twop;
+    }
+
+    public void setTwop_avg(Double twop_avg) {
+        this.twop_avg = twop_avg;
+    }
+
+    public void setTwop_pct(Double twop_pct) {
+        this.twop_pct = twop_pct;
+    }
+
+    public void setEfg_pct(Double efg_pct) {
+        this.efg_pct = efg_pct;
+    }
+
+    public void setFt(Double ft) {
+        this.ft = ft;
+    }
+
+    public void setFt_avg(Double ft_avg) {
+        this.ft_avg = ft_avg;
+    }
+
+    public void setFt_pct(Double ft_pct) {
+        this.ft_pct = ft_pct;
+    }
+
+    public void setOrb(Double orb) {
+        this.orb = orb;
+    }
+
+    public void setDrb(Double drb) {
+        this.drb = drb;
+    }
+
+    public void setTrb(Double trb) {
+        this.trb = trb;
+    }
+
+    public void setAst(Double ast) {
+        this.ast = ast;
+    }
+
+    public void setStl(Double stl) {
+        this.stl = stl;
+    }
+
+    public void setBlk(Double blk) {
+        this.blk = blk;
+    }
+
+    public void setTov(Double tov) {
+        this.tov = tov;
+    }
+
+    public void setPf(Double pf) {
+        this.pf = pf;
+    }
+
+    public void setPts(Double pts) {
+        this.pts = pts;
+    }
+
+    public void updatePlayer(Player updatedPlayer) {
+        this.setId(updatedPlayer.getId());
+        this.setRk(updatedPlayer.getRk());
+        this.setName(updatedPlayer.getName());
+        this.setAge(updatedPlayer.getAge());
+        this.setTeam(updatedPlayer.getTeam());
+        this.setPos(updatedPlayer.getPos());
+        this.setG(updatedPlayer.getG());
+        this.setGs(updatedPlayer.getGs());
+        this.setMp(updatedPlayer.getMp());
+        this.setFg(updatedPlayer.getFg());
+        this.setFg_avg(updatedPlayer.getFg_avg());
+        this.setFg_pct(updatedPlayer.getFg_pct());
+        this.setThreep(updatedPlayer.getThreep());
+        this.setThreep_avg(updatedPlayer.getThreep_avg());
+        this.setThreep_pct(updatedPlayer.getThreep_pct());
+        this.setTwop(updatedPlayer.getTwop());
+        this.setTwop_avg(updatedPlayer.getTwop_avg());
+        this.setTwop_pct(updatedPlayer.getTwop_pct());
+        this.setEfg_pct(updatedPlayer.getEfg_pct());
+        this.setFt(updatedPlayer.getFt());
+        this.setFt_avg(updatedPlayer.getFt_avg());
+        this.setFt_pct(updatedPlayer.getFt_pct());
+        this.setOrb(updatedPlayer.getOrb());
+        this.setDrb(updatedPlayer.getDrb());
+        this.setTrb(updatedPlayer.getTrb());
+        this.setAst(updatedPlayer.getAst());
+        this.setStl(updatedPlayer.getStl());
+        this.setBlk(updatedPlayer.getBlk());
+        this.setTov(updatedPlayer.getTov());
+        this.setPf(updatedPlayer.getPf());
+        this.setPts(updatedPlayer.getPts());
+    }
+
     @Override
     public String toString() {
         return "Player{" +
                 "id=" + id +
                 ", rk=" + rk +
-                ", player='" + player + '\'' +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", team='" + team + '\'' +
                 ", pos='" + pos + '\'' +
