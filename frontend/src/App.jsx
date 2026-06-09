@@ -8,6 +8,12 @@ import PlayerData from "./components/PlayerData"
 
 function App() {
   return (
+    <div className="flex h-screen items-center justify-center">
+      <h1 className="text-4xl font-bold text-blue-600">
+        Tailwind is working!
+      </h1>
+    </div>
+    /*
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -17,7 +23,7 @@ function App() {
           <Route path="search" element={<Search />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */
   );
 }
 
