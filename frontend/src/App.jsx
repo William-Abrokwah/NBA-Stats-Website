@@ -8,9 +8,6 @@ import PlayerData from "./components/PlayerData"
 
 function App() {
   return (
-    <PlayerData />
-
-    /*
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -21,7 +18,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    */
   );
 }
 
