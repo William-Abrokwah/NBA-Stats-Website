@@ -1,0 +1,154 @@
+{
+    "teams": [
+        {
+            "image": "/NBA-Team-Placeholderk.svg", 
+            "name": "Oklahoma City Thunder",
+            "abbr": "OKC"
+        }, 
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "San Antonio Spurs",
+            "abbr": "SAS"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Bosten Celtics",
+            "abbr": "BOS"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Detroit Pistons",
+            "abbr": "DET"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "New York Knicks",
+            "abbr": "NYK"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Houstan Rockets",
+            "abbr": "HOU"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Denver Nuggets",
+            "abbr": "DEN"
+        }, 
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Charlotte Hornets",
+            "abbr": "CHO"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Cleveland Cavaliers",
+            "abbr": "CLE"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Minnesota Timberwolves",
+            "abbr": "MIN"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Toronto Raptors",
+            "abbr": "TOR"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Atlanta Hawks",
+            "abbr": "ATL"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Miami Heat",
+            "abbr": "MIA"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Phoenix Suns",
+            "abbr": "PHO"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Los Angeles Lakers",
+            "abbr": "LAL"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Los Angeles Clippers",
+            "abbr": "LAC"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Orlando Magic",
+            "abbr": "ORL"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Portland Trail Blazers",
+            "abbr": "POR"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Philadelphia 76ers",
+            "abbr": "PHI"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Golden State Warriors",
+            "abbr": "GSW"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "New Orleans Pelicans",
+            "abbr": "NOP"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Chicago Bulls",
+            "abbr": "CHI"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Dallas Mavericks",
+            "abbr": "DAL"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Memphis Grizzlies",
+            "abbr": "MEM"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Milwaukee Bucks",
+            "abbr": "MIL"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Indiana Pacers",
+            "abbr": "IND"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Utah Jazz",
+            "abbr": "UTA"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Sacramento Kings",
+            "abbr": "SAC"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Brooklyn Nets",
+            "abbr": "BRK"
+        },
+        {
+            "image": "/NBA-Team-Placeholder.svg", 
+            "name": "Washington Wizards",
+            "abbr": "WAS"
+        }
+    ]
+}

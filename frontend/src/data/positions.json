@@ -1,0 +1,29 @@
+{
+    "positions": [
+        {
+            "image": "", 
+            "name": "Point Gaurd", 
+            "abbr": "PG"
+        }, 
+        {
+            "image": "", 
+            "name": "Shooting Gaurd", 
+            "abbr": "SG"
+        },
+        {
+            "image": "", 
+            "name": "Small Forward", 
+            "abbr": "SF"
+        },
+        {
+            "image": "", 
+            "name": "Power Forward", 
+            "abbr": "PF"
+        },
+        {
+            "image": "", 
+            "name": "Center", 
+            "abbr": "C"
+        }
+    ]
+}
