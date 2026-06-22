@@ -1,11 +1,12 @@
-import Search from "../components/Search"
+import { Link } from "react-router";
 import { useState } from "react";
-import teamData from "../data/teams.json"
+import Search from "../components/Search"
+import TeamData from "../data/teams.json"
 
 function Teams() {
     const [query, setQuery] = useState("");
 
-    const filteredTeams = teamData.teams.filter(t => 
+    const filteredTeams = TeamData.teams.filter(t => 
         t.name.toLowerCase().includes(query.toLowerCase()) || 
         t.abbr.toLowerCase().includes(query.toLowerCase()));
         
@@ -21,9 +22,14 @@ function Teams() {
 
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 mt-6">
                 {filteredTeams.map(team => (
-                    <div className="flex justify-center items-center bg-white border hover:border-red-500 text-black px-2 py-2 rounded-2xl" key={team.name}>
+                    <Link 
+                        to={`/teams/${team.abbr.toLowerCase()}`}
+                        key={team.name}
+                        className="flex flex-col justify-center items-center text-center bg-white border-2 hover:border-amber-500 hover:cursor-pointer hover:opacity-90 active:opacity-95 active:border-red-500 h text-black px-2 py-2 rounded-2xl"
+                    >
                         <img src={`https://cdn.ssref.net/req/202606180/tlogo/bbr/${team.abbr}-2026.png`} alt={team.abbr}/>
-                    </div>
+                        <p className="font-bold">{team.name}</p>
+                    </Link>
                 ))}
             </div>
         </div>

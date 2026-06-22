@@ -1,7 +1,7 @@
 {
     "teams": [
         {
-            "image": "/NBA-Team-Placeholderk.svg", 
+            "image": "/NBA-Team-Placeholder.svg", 
             "name": "Oklahoma City Thunder",
             "abbr": "OKC"
         }, 
@@ -12,7 +12,7 @@
         },
         {
             "image": "/NBA-Team-Placeholder.svg", 
-            "name": "Bosten Celtics",
+            "name": "Boston Celtics",
             "abbr": "BOS"
         },
         {
@@ -27,7 +27,7 @@
         },
         {
             "image": "/NBA-Team-Placeholder.svg", 
-            "name": "Houstan Rockets",
+            "name": "Houston Rockets",
             "abbr": "HOU"
         },
         {

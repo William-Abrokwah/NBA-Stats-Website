@@ -1,27 +1,27 @@
 {
     "positions": [
         {
-            "image": "", 
+            "image": "/NBA-Position-Placeholder.svg", 
             "name": "Point Gaurd", 
             "abbr": "PG"
         }, 
         {
-            "image": "", 
+            "image": "/NBA-Position-Placeholder.svg", 
             "name": "Shooting Gaurd", 
             "abbr": "SG"
         },
         {
-            "image": "", 
+            "image": "/NBA-Position-Placeholder.svg", 
             "name": "Small Forward", 
             "abbr": "SF"
         },
         {
-            "image": "", 
+            "image": "/NBA-Position-Placeholder.svg", 
             "name": "Power Forward", 
             "abbr": "PF"
         },
         {
-            "image": "", 
+            "image": "/NBA-Position-Placeholder.svg", 
             "name": "Center", 
             "abbr": "C"
         }

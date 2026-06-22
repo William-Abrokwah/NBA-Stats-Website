@@ -21,7 +21,7 @@ function Home() {
                     Find out who is breaking the metrics and who is holding their team back
                 </p>
                 <div className="flex gap-4">
-                    <Link to="/players" className="flex justify-center items-center font-bold text-xl bg-red-500 w-72 h-15 rounded-4xl mt-8 hover:bg-red-400 active:bg-red-700 transition-colors">
+                    <Link to="/players" className="flex justify-center items-center font-bold text-xl bg-orange-500  w-72 h-15 rounded-4xl mt-8 hover:bg-orange-400 active:bg-orange-700 transition-colors">
                         See the Real Stats
                     </Link>
                 </div>
