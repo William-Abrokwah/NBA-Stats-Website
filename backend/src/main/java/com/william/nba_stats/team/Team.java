@@ -1,19 +1,14 @@
-package com.william.nba_stats;
+package com.william.nba_stats.team;
 
 import jakarta.persistence.*;
 
 @Entity
-public class Player {
+public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // Primary key (database unique identifier)
 
-    private Integer rk; // Rank of player in stats list
-    private String name; // Player name
-    private Integer age; // Player age during season
-    private String team; // Team abbreviation (e.g., LAL, GSW)
-    private String pos; // Player position (e.g., PG, SG, SF, PF, C)
-
+    private String tabb; // Team abbreviation (e.g., LAL, GSW)
     private Integer g; // Games played
     private Integer gs; // Games started
 
@@ -50,20 +45,15 @@ public class Player {
 
     private Double pts; // Total points scored
 
-    public Player() {
+    public Team() {
     }
 
-    public Player(Long id, Integer rk, String name, Integer age, String team, String pos, Integer g,
-                  Integer gs, Double mp, Double fg, Double fg_avg, Double fg_pct, Double threep,
-                  Double threep_avg, Double threep_pct, Double twop, Double twop_avg, Double twop_pct,
-                  Double efg_pct, Double ft, Double ft_avg, Double ft_pct, Double orb, Double drb, Double trb,
-                  Double ast, Double stl, Double blk, Double tov, Double pf, Double pts) {
+    public Team(Long id, String tabb, Integer g, Integer gs, Double mp, Double fg, Double fg_avg, Double fg_pct,
+                Double threep, Double threep_avg, Double threep_pct, Double twop, Double twop_avg, Double twop_pct,
+                Double efg_pct, Double ft, Double ft_avg, Double ft_pct, Double orb, Double drb, Double trb, Double ast,
+                Double stl, Double blk, Double tov, Double pf, Double pts) {
         this.id = id;
-        this.rk = rk;
-        this.name = name;
-        this.age = age;
-        this.team = team;
-        this.pos = pos;
+        this.tabb = tabb;
         this.g = g;
         this.gs = gs;
         this.mp = mp;
@@ -95,24 +85,8 @@ public class Player {
         return id;
     }
 
-    public Integer getRk() {
-        return rk;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public String getTeam() {
-        return team;
-    }
-
-    public String getPos() {
-        return pos;
+    public String getTabb() {
+        return tabb;
     }
 
     public Integer getG() {
@@ -219,24 +193,8 @@ public class Player {
         this.id = id;
     }
 
-    public void setRk(Integer rk) {
-        this.rk = rk;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }
-
-    public void setPos(String pos) {
-        this.pos = pos;
+    public void setTabb(String tabb) {
+        this.tabb = tabb;
     }
 
     public void setG(Integer g) {
@@ -339,49 +297,41 @@ public class Player {
         this.pts = pts;
     }
 
-    public void updatePlayer(Player updatedPlayer) {
-        this.setId(updatedPlayer.getId());
-        this.setRk(updatedPlayer.getRk());
-        this.setName(updatedPlayer.getName());
-        this.setAge(updatedPlayer.getAge());
-        this.setTeam(updatedPlayer.getTeam());
-        this.setPos(updatedPlayer.getPos());
-        this.setG(updatedPlayer.getG());
-        this.setGs(updatedPlayer.getGs());
-        this.setMp(updatedPlayer.getMp());
-        this.setFg(updatedPlayer.getFg());
-        this.setFg_avg(updatedPlayer.getFg_avg());
-        this.setFg_pct(updatedPlayer.getFg_pct());
-        this.setThreep(updatedPlayer.getThreep());
-        this.setThreep_avg(updatedPlayer.getThreep_avg());
-        this.setThreep_pct(updatedPlayer.getThreep_pct());
-        this.setTwop(updatedPlayer.getTwop());
-        this.setTwop_avg(updatedPlayer.getTwop_avg());
-        this.setTwop_pct(updatedPlayer.getTwop_pct());
-        this.setEfg_pct(updatedPlayer.getEfg_pct());
-        this.setFt(updatedPlayer.getFt());
-        this.setFt_avg(updatedPlayer.getFt_avg());
-        this.setFt_pct(updatedPlayer.getFt_pct());
-        this.setOrb(updatedPlayer.getOrb());
-        this.setDrb(updatedPlayer.getDrb());
-        this.setTrb(updatedPlayer.getTrb());
-        this.setAst(updatedPlayer.getAst());
-        this.setStl(updatedPlayer.getStl());
-        this.setBlk(updatedPlayer.getBlk());
-        this.setTov(updatedPlayer.getTov());
-        this.setPf(updatedPlayer.getPf());
-        this.setPts(updatedPlayer.getPts());
+    public void updateTeam(Team updatedTeam) {
+        this.setId(updatedTeam.getId());
+        this.setTabb(updatedTeam.getTabb());
+        this.setG(updatedTeam.getG());
+        this.setGs(updatedTeam.getGs());
+        this.setMp(updatedTeam.getMp());
+        this.setFg(updatedTeam.getFg());
+        this.setFg_avg(updatedTeam.getFg_avg());
+        this.setFg_pct(updatedTeam.getFg_pct());
+        this.setThreep(updatedTeam.getThreep());
+        this.setThreep_avg(updatedTeam.getThreep_avg());
+        this.setThreep_pct(updatedTeam.getThreep_pct());
+        this.setTwop(updatedTeam.getTwop());
+        this.setTwop_avg(updatedTeam.getTwop_avg());
+        this.setTwop_pct(updatedTeam.getTwop_pct());
+        this.setEfg_pct(updatedTeam.getEfg_pct());
+        this.setFt(updatedTeam.getFt());
+        this.setFt_avg(updatedTeam.getFt_avg());
+        this.setFt_pct(updatedTeam.getFt_pct());
+        this.setOrb(updatedTeam.getOrb());
+        this.setDrb(updatedTeam.getDrb());
+        this.setTrb(updatedTeam.getTrb());
+        this.setAst(updatedTeam.getAst());
+        this.setStl(updatedTeam.getStl());
+        this.setBlk(updatedTeam.getBlk());
+        this.setTov(updatedTeam.getTov());
+        this.setPf(updatedTeam.getPf());
+        this.setPts(updatedTeam.getPts());
     }
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "Team{" +
                 "id=" + id +
-                ", rk=" + rk +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", team='" + team + '\'' +
-                ", pos='" + pos + '\'' +
+                ", tabb='" + tabb + '\'' +
                 ", g=" + g +
                 ", gs=" + gs +
                 ", mp=" + mp +

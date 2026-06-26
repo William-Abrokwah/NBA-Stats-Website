@@ -1,4 +1,4 @@
-package com.william.nba_stats;
+package com.william.nba_stats.player;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class PlayerService {
 
     public Player getPlayerById(Long id) {
         return repository.findById(id).orElseThrow(() ->
-        new IllegalStateException("Player not found"));
+            new IllegalStateException("Player not found"));
     }
 
     public List<Player> getPlayerByName(String name) {

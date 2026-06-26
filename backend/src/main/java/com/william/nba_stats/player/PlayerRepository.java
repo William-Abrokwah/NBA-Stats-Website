@@ -1,7 +1,7 @@
-package com.william.nba_stats;
+package com.william.nba_stats.player;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository
