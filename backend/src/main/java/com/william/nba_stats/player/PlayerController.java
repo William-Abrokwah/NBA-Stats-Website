@@ -20,17 +20,7 @@ public class PlayerController {
             @RequestParam(required = false) String team,
             @RequestParam(required = false) String pos
     ) {
-        if (name != null) {
-            return service.getPlayerByName(name);
-        }  else if (team != null && pos != null) {
-            return service.getPlayersByTeamAndPos(team, pos);
-        } else if (team != null) {
-            return service.getPlayersByTeam(team);
-        } else if (pos != null) {
-            return service.getPlayersByPos(pos);
-        } else {
-            return service.getPlayers();
-        }
+        return service.getPlayers(name, team, pos);
     }
 
     @GetMapping("/{id}")

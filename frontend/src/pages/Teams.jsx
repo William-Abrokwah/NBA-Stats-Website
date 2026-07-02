@@ -25,10 +25,10 @@ function Teams() {
                     <Link 
                         to={`/teams/${team.abbr.toLowerCase()}`}
                         key={team.name}
-                        className="flex flex-col justify-center items-center text-center bg-white border-2 hover:border-amber-500 hover:cursor-pointer hover:opacity-90 active:opacity-95 active:border-red-500 h text-black px-2 py-2 rounded-2xl"
+                        className="flex flex-col justify-center items-center text-center bg-white border-2 hover:border-amber-500 hover:cursor-pointer hover:opacity-90 active:opacity-95 active:border-red-500 text-black px-2 py-2 rounded-2xl"
                     >
                         <img src={`https://cdn.ssref.net/req/202606180/tlogo/bbr/${team.abbr}-2026.png`} alt={team.abbr}/>
-                        <p className="font-bold">{team.name}</p>
+                        <p className="font-bold text-sm sm:text-base">{team.name}</p>
                     </Link>
                 ))}
             </div>

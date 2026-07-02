@@ -2,12 +2,12 @@
     "positions": [
         {
             "image": "/NBA-Position-Placeholder.svg", 
-            "name": "Point Gaurd", 
+            "name": "Point Guard", 
             "abbr": "PG"
         }, 
         {
             "image": "/NBA-Position-Placeholder.svg", 
-            "name": "Shooting Gaurd", 
+            "name": "Shooting Guard", 
             "abbr": "SG"
         },
         {

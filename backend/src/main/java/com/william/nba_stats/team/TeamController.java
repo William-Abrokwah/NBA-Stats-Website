@@ -24,7 +24,7 @@ public class TeamController {
         return service.getTeamById(id);
     }
 
-    @GetMapping("/{tabb}")
+    @GetMapping("/tabb/{tabb}")
     public Team getTeamByTabb(@PathVariable String tabb) {
         return service.getTeamByTabb(tabb);
     }
