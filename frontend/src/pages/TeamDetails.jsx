@@ -2,30 +2,23 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router"
 import TeamData from "../data/teams.json"
 import Stat from "../components/Stat.jsx"
+import { getTeam } from "../services/api.js";
 
 function TeamDetails() {
     const [team, setTeam] = useState()
     const { abbr } = useParams();
 
     useEffect(() => {
-        const fetchTeam = async () => {
+        const loadTeam = async () => {
             try {
-                const response = await fetch(
-                    `http://localhost:8080/api/v1/team/tabb/${abbr.toUpperCase()}`
-                );
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch team.");
-                }
-
-                const data = await response.json();
+                const data = await getTeam(abbr);
                 setTeam(data);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchTeam();
+        loadTeam();
     }, [abbr])
 
     if (!team) { 

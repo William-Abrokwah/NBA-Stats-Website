@@ -3,30 +3,23 @@ import { useParams } from "react-router"
 import Stat from "../components/Stat.jsx"
 import TeamData from "../data/teams.json"
 import PositionData from "../data/positions.json"
+import { getPlayer } from "../services/api.js";
 
 function PlayerDetails() {
     const [player, setPlayer] = useState();
     const { id } = useParams();
 
     useEffect(() => {
-        const fetchPlayer = async () => {
+        const loadPlayer = async () => {
             try {
-                const response = await fetch(
-                    `http://localhost:8080/api/v1/player/${id}`
-                );
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch player.");
-                }
-
-                const data = await response.json();
+                const data = await getPlayer(id);
                 setPlayer(data);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchPlayer();
+        loadPlayer();
     }, [id])
 
     if (!player) { 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router";
 import Search from "../components/Search"
+import { getPlayers } from "../services/api.js";
 
 function Players() {
     const [query, setQuery] = useState("");
@@ -11,7 +12,7 @@ function Players() {
     const position = searchParams.get("pos");
 
     useEffect(() => {
-        const fetchPlayers = async () => {
+        const loadPlayers = async () => {
             try {
                 const params = new URLSearchParams();
 
@@ -19,22 +20,14 @@ function Players() {
                 if (position) params.append("pos", position);
                 if (query) params.append("name", query);
 
-                const response = await fetch(
-                    `http://localhost:8080/api/v1/player?${params.toString()}`
-                );
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch players.");
-                }
-
-                const data = await response.json();
+                const data = await getPlayers(params);
                 setPlayers(data);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchPlayers();
+        loadPlayers();
     }, [team, position, query])
 
     function getRefId(name) {
