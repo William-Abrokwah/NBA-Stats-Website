@@ -84,7 +84,7 @@ npm install
 npm run dev
 ```
  
-### 4. Data Scraper (optional — to repopulate the DB)
+### 4. Data Scraper (optional, to repopulate the DB)
 ```bash
 cd data scraping
 pip install -r requirements.txt
