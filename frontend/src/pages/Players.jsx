@@ -7,6 +7,8 @@ function Players() {
     const [query, setQuery] = useState("");
     const [players, setPlayers] = useState([]);
     const [searchParams] = useSearchParams();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     const team = searchParams.get("team");
     const position = searchParams.get("pos");
@@ -21,14 +23,48 @@ function Players() {
                 if (query) params.append("name", query);
 
                 const data = await getPlayers(params);
-                setPlayers(data);
+
+                if(!data) {
+                    setError(true);
+                } else {
+                    setPlayers(data);
+                }
             } catch (error) {
                 console.error(error);
+                setError(true);
+            } finally {
+                setLoading(false);
             }
         };
 
         loadPlayers();
     }, [team, position, query])
+
+    if (loading) { 
+        return(
+        <div className="mt-8">
+            <h1 className="text-3xl font-bold mb-2">Select a Player</h1>
+            <Search
+                value={query} 
+                onChange={setQuery} 
+                placeholder={"Search for Players"}
+            />
+            <h1 className="mt-3">Loading...</h1>
+        </div>); 
+    }
+
+    if (error) {
+        return (
+        <div className="mt-8">
+            <h1 className="text-3xl font-bold mb-2">Select a Player</h1>
+            <Search
+                value={query} 
+                onChange={setQuery} 
+                placeholder={"Search for Players"}
+            />
+            <h1 className="mt-3">Players not found</h1>
+        </div>);  
+    }
 
     function getRefId(name) {
         const [first, ...lastParts] = name.toLowerCase().split(" ");

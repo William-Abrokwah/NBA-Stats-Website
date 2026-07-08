@@ -6,23 +6,37 @@ import { getTeam } from "../services/api.js";
 
 function TeamDetails() {
     const [team, setTeam] = useState()
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
     const { abbr } = useParams();
 
     useEffect(() => {
         const loadTeam = async () => {
             try {
                 const data = await getTeam(abbr);
-                setTeam(data);
+
+                if(!data) {
+                    setError(true);
+                } else {
+                    setTeam(data);
+                }
             } catch (error) {
                 console.error(error);
+                setError(true);
+            } finally {
+                setLoading(false);
             }
         };
 
         loadTeam();
     }, [abbr])
 
-    if (!team) { 
-        return <h1>Team not found</h1>; 
+    if (loading) { 
+        return <h1 className="mt-3">Loading...</h1>; 
+    }
+
+    if (error) { 
+        return <h1 className="mt-3">Team not found</h1>; 
     }
 
     const name = TeamData.teams.find( 

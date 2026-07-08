@@ -7,23 +7,37 @@ import { getPlayer } from "../services/api.js";
 
 function PlayerDetails() {
     const [player, setPlayer] = useState();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
     const { id } = useParams();
 
     useEffect(() => {
         const loadPlayer = async () => {
             try {
                 const data = await getPlayer(id);
-                setPlayer(data);
+
+                if(!data) {
+                    setError(true);
+                } else {
+                    setPlayer(data);
+                }
             } catch (error) {
                 console.error(error);
+                setError(true);
+            } finally {
+                setLoading(false);
             }
         };
 
         loadPlayer();
     }, [id])
 
-    if (!player) { 
-        return <h1>Player not found</h1>; 
+    if (loading) { 
+        return <h1 className="mt-3">Loading...</h1>; 
+    }
+
+    if (error) { 
+        return <h1 className="mt-3">Player not found</h1>; 
     }
 
     function getRefId(name) {
