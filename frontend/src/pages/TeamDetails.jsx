@@ -65,21 +65,21 @@ function TeamDetails() {
                             <h2 className="mb-4 text-xl font-bold">Shooting</h2>
 
                             <Stat label="Field Goals" value={team.fg} />
-                            <Stat label="Field Goals Attempts" value={team.fg_avg} />
+                            <Stat label="Field Goals Attempts" value={team.fga} />
                             <Stat label="Field Goal Percentage" value={`${(team.fg_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="3-Point Field Goals" value={team.threep} />
-                            <Stat label="3-Point Field Goals Attempts" value={team.threep_avg} />
+                            <Stat label="3-Point Field Goals Attempts" value={team.threepa} />
                             <Stat label="3-Point Field Goal Percentage" value={`${(team.threep_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="2-Point Field Goals" value={team.twop} />
-                            <Stat label="2-Point Field Goals Attempts" value={team.twop_avg} />
+                            <Stat label="2-Point Field Goals Attempts" value={team.twopa} />
                             <Stat label="2-Point Field Goal Percentage" value={`${(team.twop_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="Effective Field Goal Percentage" value={`${(team.efg_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="Free Throws" value={team.ft} />
-                            <Stat label="Free Throw Attempts" value={team.ft_avg} />
+                            <Stat label="Free Throw Attempts" value={team.fta} />
                             <Stat label="Free Throw Percentage" value={`${(team.ft_pct * 100).toFixed(1)}%`} />
                         </div>
                         

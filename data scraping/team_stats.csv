@@ -1,4 +1,4 @@
-tabb,g,gs,mp,fg,fg_avg,fg_pct,threep,threep_avg,threep_pct,twop,twop_avg,twop_pct,efg_pct,ft,ft_avg,ft_pct,orb,drb,trb,ast,stl,blk,tov,pf,pts
+tabb,g,gs,mp,fg,fga,fg_pct,threep,threepa,threep_pct,twop,twopa,twop_pct,efg_pct,ft,fta,ft_pct,orb,drb,trb,ast,stl,blk,tov,pf,pts
 OKC,82,82,242.1,43.1,89.1,0.484,13.8,37.9,0.365,29.3,51.2,0.572,0.561,19.0,23.2,0.817,9.6,34.6,44.1,25.8,9.7,5.5,12.6,19.0,119.0
 SAS,82,82,240.6,43.4,89.9,0.483,13.6,37.9,0.359,29.8,52.0,0.574,0.559,19.3,24.6,0.787,11.4,35.6,47.0,28.1,7.5,5.5,13.5,18.9,119.8
 BOS,82,82,240.6,42.1,90.2,0.467,15.5,42.1,0.367,26.7,48.1,0.555,0.553,15.1,18.7,0.807,12.5,33.9,46.4,24.6,7.1,5.0,12.4,19.0,114.9

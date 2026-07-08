@@ -1,4 +1,4 @@
-rk,name,age,team,pos,g,gs,mp,fg,fg_avg,fg_pct,threep,threep_avg,threep_pct,twop,twop_avg,twop_pct,efg_pct,ft,ft_avg,ft_pct,orb,drb,trb,ast,stl,blk,tov,pf,pts
+rk,name,age,team,pos,g,gs,mp,fg,fga,fg_pct,threep,threepa,threep_pct,twop,twopa,twop_pct,efg_pct,ft,fta,ft_pct,orb,drb,trb,ast,stl,blk,tov,pf,pts
 1,Shai Gilgeous-Alexander,27,OKC,PG,68,68,33.2,10.8,19.4,0.553,1.7,4.4,0.386,9.1,15.0,0.602,0.597,7.9,9.0,0.879,0.6,3.7,4.3,6.6,1.4,0.8,2.2,2.0,31.1
 2,Chet Holmgren,23,OKC,PF,69,69,28.9,6.3,11.3,0.557,1.3,3.5,0.362,5.0,7.8,0.646,0.614,3.3,4.1,0.792,1.9,7.0,8.9,1.7,0.6,1.9,1.6,2.3,17.1
 3,Jalen Williams,24,OKC,SG,33,33,28.4,6.5,13.5,0.484,0.7,2.3,0.299,5.8,11.2,0.523,0.51,3.3,3.9,0.837,0.8,3.8,4.6,5.5,1.2,0.3,1.9,2.0,17.1

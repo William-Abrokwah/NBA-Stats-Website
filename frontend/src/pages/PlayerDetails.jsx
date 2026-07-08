@@ -75,21 +75,21 @@ function PlayerDetails() {
                             <h2 className="mb-4 text-xl font-bold">Shooting</h2>
 
                             <Stat label="Field Goals" value={player.fg} />
-                            <Stat label="Field Goals Attempts" value={player.fg_avg} />
+                            <Stat label="Field Goals Attempts" value={player.fga} />
                             <Stat label="Field Goal Percentage" value={`${(player.fg_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="3-Point Field Goals" value={player.threep} />
-                            <Stat label="3-Point Field Goals Attempts" value={player.threep_avg} />
+                            <Stat label="3-Point Field Goals Attempts" value={player.threepa} />
                             <Stat label="3-Point Field Goal Percentage" value={`${(player.threep_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="2-Point Field Goals" value={player.twop} />
-                            <Stat label="2-Point Field Goals Attempts" value={player.twop_avg} />
+                            <Stat label="2-Point Field Goals Attempts" value={player.twopa} />
                             <Stat label="2-Point Field Goal Percentage" value={`${(player.twop_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="Effective Field Goal Percentage" value={`${(player.efg_pct * 100).toFixed(1)}%`} />
 
                             <Stat label="Free Throws" value={player.ft} />
-                            <Stat label="Free Throw Attempts" value={player.ft_avg} />
+                            <Stat label="Free Throw Attempts" value={player.fta} />
                             <Stat label="Free Throw Percentage" value={`${(player.ft_pct * 100).toFixed(1)}%`} />
                         </div>
                         
