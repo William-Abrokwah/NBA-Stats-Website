@@ -5,7 +5,7 @@ A full-stack NBA stats website that lets you explore player and team stats for t
 
 Link to hosting: https://nba-stats-website-wine.vercel.app/
 
-Note: There may be issues with backend due to hosting limit rates.
+Note: There may be issues with backend due to hosting limit rates. If page says loading it means the backend is booting back up.
 
 Screenshot:<p><img src="" alt="HoopStats screenshot"></p>
 
