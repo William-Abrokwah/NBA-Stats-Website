@@ -21,7 +21,7 @@ export async function getPlayers(params) {
 }
 
 export async function getTeam(abbr) {
-    const response = await fetch(`http://localhost:8080/api/v1/team/tabb/${abbr.toUpperCase()}`);
+    const response = await fetch(`${BASE_URL}/api/v1/team/tabb/${abbr.toUpperCase()}`);
 
     if (!response.ok) {
         throw new Error("Failed to fetch team.");
