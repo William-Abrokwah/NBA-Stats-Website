@@ -2,15 +2,14 @@
 
 A full-stack NBA stats website that lets you explore player and team stats for the 2025-2026 NBA season. Search by player, browse by team, or filter by position.
 
-
 Link to hosting: https://nba-stats-website-wine.vercel.app/
 
 Note: There may be issues with backend due to hosting limit rates. If page says loading it means the backend is booting back up.
 
-Screenshot:<p><img src="" alt="HoopStats screenshot"></p>
+Preview:<p><img src="" alt="HoopStats screenshot"></p>
 
 ## 📋 Table of Contents 
-- [Introduction / Overview](#-introductionoverview)
+- [Introduction / Overview](#-introduction--overview)
 - [Features (MVP)](#-features-mvp)
 - [Tech Stack / Tools](#️-tech-stack--tools)
 - [Installation / Running the Project](#️-installationrunning-the-project)
@@ -25,11 +24,11 @@ Screenshot:<p><img src="" alt="HoopStats screenshot"></p>
 HoopStats is a stats-browsing app for NBA fans who want a clean, visual way to check out player and team performance for the current season. It shows per-game averages for every player, combined team averages, and lets you explore by team, player, or position.
 
 ## 🚀 Features (MVP)
-- 🔍 Search players by name
-- 📊 Per-game average stats for every player, 2025-2026 season
-- 🏀 Team pages showing combined team averages and link to roster
-- 🧍 Position filter. View all players at a given position
-- 📱 Responsive UI built with Tailwind CSS
+- Search players by name
+- Per-game average stats for every player, 2025-2026 season
+- Team pages showing combined team averages and link to roster
+- Position filter. View all players at a given position
+- Responsive UI built with Tailwind CSS
 
 ## 🛠️ Tech Stack / Tools
 **Frontend:**
@@ -104,9 +103,6 @@ Once running, open the frontend in your browser to:
 Player and team stats are collected via a custom Python scraper (BeautifulSoup + Pandas) that pulls 2025-2026 season per-game averages, cleans and structures the data, and exports it to CSV before loading it into the PostgreSQL database on Supabase.
 
 > https://www.basketball-reference.com/leagues/NBA_2026_ratings.html
-
-## 🖊️ Authors
-- **William Abrokwah**
 
 ## 💡 Contributing
 
