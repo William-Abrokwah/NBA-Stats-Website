@@ -6,7 +6,11 @@ Link to hosting: https://nba-stats-website-wine.vercel.app/
 
 Note: There may be issues with backend due to hosting limit rates. If page says loading it means the backend is booting back up.
 
-Preview:<p><img src="" alt="HoopStats screenshot"></p>
+Preview (Click image to redirect to video preview):
+
+<a href="https://www.youtube.com/watch?v=EL_FkdwM2p4" target="_blank" rel="noopener">
+    <img src="./frontend/public/HoopStats-Preview.png" alt="HoopStats preview" style="width: 600px; height: auto;" >
+</a>
 
 ## 📋 Table of Contents 
 - [Introduction / Overview](#-introduction--overview)
