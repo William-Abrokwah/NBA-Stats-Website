@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router"
-import TeamData from "../data/teams.json"
+import { teamData } from "../data/teams"
 import Stat from "../components/Stat.jsx"
 import { getTeam } from "../services/api.js";
 
@@ -39,7 +39,7 @@ function TeamDetails() {
         return <h1 className="mt-3">Team not found</h1>; 
     }
 
-    const name = TeamData.teams.find( 
+    const name = teamData.find( 
         t => t.abbr.toLowerCase() === abbr).name;
 
     return ( 

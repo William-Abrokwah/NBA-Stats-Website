@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router"
 import Stat from "../components/Stat.jsx"
-import TeamData from "../data/teams.json"
-import PositionData from "../data/positions.json"
+import { teamData } from "../data/teams"
+import { positionData } from "../data/positions"
 import { getPlayer } from "../services/api.js";
 
 function PlayerDetails() {
@@ -76,8 +76,8 @@ function PlayerDetails() {
 
                     <div className="bg-white rounded-xl p-6 mb-8">
                             <Stat label="Age" value={player.age} />
-                            <Stat label="Team" value={TeamData.teams.find(t => t.abbr === player.team).name} />
-                            <Stat label="Position" value={PositionData.positions.find(p => p.abbr === player.pos).name} />
+                            <Stat label="Team" value={teamData.find(t => t.abbr === player.team).name} />
+                            <Stat label="Position" value={positionData.find(p => p.abbr === player.pos).name} />
                             <Stat label="Games" value={player.g} />
                             <Stat label="Games Started" value={player.gs} />
                             <Stat label="Minutes Played" value={player.mp} />

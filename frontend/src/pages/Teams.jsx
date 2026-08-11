@@ -1,12 +1,12 @@
 import { Link } from "react-router";
 import { useState } from "react";
 import Search from "../components/Search"
-import TeamData from "../data/teams.json"
+import { teamData } from "../data/teams"
 
 function Teams() {
     const [query, setQuery] = useState("");
 
-    const filteredTeams = TeamData.teams.filter(t => 
+    const filteredTeams = teamData.filter(t => 
         t.name.toLowerCase().includes(query.toLowerCase()) || 
         t.abbr.toLowerCase().includes(query.toLowerCase()));
         

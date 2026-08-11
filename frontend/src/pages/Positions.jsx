@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import Search from "../components/Search"
-import PositionData from "../data/positions.json"
+import { positionData } from "../data/positions"
 
 
 function Positions() {
     const [query, setQuery] = useState("");
 
-    const filteredPositions = PositionData.positions.filter(p => 
+    const filteredPositions = positionData.filter(p => 
         p.name.toLowerCase().includes(query.toLowerCase()) || 
         p.abbr.toLowerCase().includes(query.toLowerCase()));
 
