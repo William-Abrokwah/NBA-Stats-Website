@@ -7,7 +7,7 @@ Link to hosting: https://nba-stats-website-wine.vercel.app/
 Preview (Click image to redirect to video preview):
 
 <a href="https://www.youtube.com/watch?v=EL_FkdwM2p4" target="_blank" rel="noopener">
-    <img src="./frontend/public/HoopStats-Preview.png" alt="HoopStats preview">
+    <img src="./frontend/public/HoopStats-Preview.png" alt="HoopStats preview" style="display: block; width: 100%;">
 </a>
 
 ## 📋 Table of Contents 
