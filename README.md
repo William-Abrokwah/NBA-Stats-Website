@@ -9,7 +9,7 @@ Note: There may be issues with backend due to hosting limit rates. If page says 
 Preview (Click image to redirect to video preview):
 
 <a href="https://www.youtube.com/watch?v=EL_FkdwM2p4" target="_blank" rel="noopener">
-    <img src="./frontend/public/HoopStats-Preview.png" alt="HoopStats preview" style="width: 600px; height: auto;" >
+    <img src="./frontend/public/HoopStats-Preview.png" alt="HoopStats preview">
 </a>
 
 ## 📋 Table of Contents 
